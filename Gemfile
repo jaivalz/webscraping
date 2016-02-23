@@ -53,3 +53,6 @@ gem 'simple_form'
 
 # devise
 gem 'devise'
+
+# Validates url image
+gem "validate_url"
