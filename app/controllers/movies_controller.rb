@@ -1,10 +1,11 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
 
+
   # GET /movies
   # GET /movies.json
   def index
-    @movies = Movie.all
+    @movies = current_user.movies
   end
 
   # GET /movies/1
@@ -24,8 +25,7 @@ class MoviesController < ApplicationController
   # POST /movies
   # POST /movies.json
   def create
-    @movie = Movie.new(movie_params)
-
+    @movie = current_user.movies.new(movie_params)
     respond_to do |format|
       if @movie.save
         format.html { redirect_to @movie, notice: 'Movie was successfully created.' }
