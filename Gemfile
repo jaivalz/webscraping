@@ -56,3 +56,6 @@ gem 'devise'
 
 # Validates url image
 gem "validate_url"
+
+# HTML parsing
+gem "nokogiri"
