@@ -59,3 +59,6 @@ gem "validate_url"
 
 # HTML parsing
 gem "nokogiri"
+
+# UTF-8
+gem "utf8_utils"
